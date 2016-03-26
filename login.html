@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ANYTHING | Login</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+
+    <div class="middle-box text-center loginscreen  animated fadeInDown">
+        <div>
+            <div>
+
+                <h1 class="logo-name">ANYTHINGS</h1>
+
+            </div>
+            <h3>Welcome to ANYTHING</h3>
+            <p>Login in. To see it in action.</p>
+            <form class="m-t" role="form" action="" method="post">
+                <div class="login-form" id="login_view">
+                    <p>LOGIN IN. TO SEE IT IN ACTION.</p>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="USERNAME" name="user_name" required="">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="PASSWORD" name="user_password" required="">
+                    </div>
+                    <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
+
+                    <a href="javascript: void(0);" onclick="manage_login('login_view', 'fp_view');"><small>Forgot password?</small></a>
+                </div>
+            </form>
+            <form class="m-t" role="form" action="" method="post">
+                <div class="login-form" id="fp_view" style="display: none;">
+                    <p>Forgot Password</p>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="EMAIL-ID" name="email">
+                    </div>
+                    <button type="submit" class="btn btn-primary block full-width m-b">Restore</button>
+                    <div class="forgot">                       
+                        <a href="javascript: void(0);" onclick="manage_login('fp_view', 'login_view');"><small>I remember my password!</small></a>
+                    </div>
+                </div>
+            </form>
+            <p class="m-t"> <small>Anything Anything Anything &copy; 2014</small> </p>
+        </div>
+    </div>
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        
+        function manage_login(login_type1, login_type2)
+        {
+            $('#'+login_type1).hide();
+            $('#'+login_type2).show();
+            return true;
+        }
+    </script>
+
+</body>
+
+</html>
